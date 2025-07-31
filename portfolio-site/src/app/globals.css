@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #FAFAFA;
+  --color-text: #111827;
+  --color-text-muted: #4B5563;
+  --color-brand: #6366F1;
+  --color-brand-dark: #4F46E5;
+  --color-border: #E5E7EB;
+
+  --font-base: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.dark {
+  --color-bg: #111827;
+  --color-text: #F9FAFB;
+  --color-text-muted: #9CA3AF;
+  --color-brand: #A5B4FC;
+  --color-brand-dark: #6366F1;
+  --color-border: #374151;
+}
+
+/* 3. Base Element Styling */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  line-height: 1.75;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-brand);
+
+}
+
+h1 {
+  font-size: 2.5rem; /* Tailwind: text-4xl */
+  font-weight: 700;
+}
