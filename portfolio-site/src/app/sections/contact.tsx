@@ -1,6 +1,4 @@
 'use client';
-
-import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
 
 const Contact = () => {
@@ -47,7 +45,7 @@ const Contact = () => {
         <section id="contact">
             <h2 className="text-3xl font-bold mb-4 text-center">Contact Me</h2>
             {submitted ? (
-                <p className="text-center">Thank you for reaching out! I'll get back to you soon.</p>
+                <p className="text-center">Thank you for reaching out! I&apos;ll get back to you soon.</p>
             ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col justify-center align-center space-y-4 w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">

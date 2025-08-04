@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 // Update the import path below to the correct location of EmailTemplate
 import { EmailTemplate } from '../../components/emailTemplate'; // Adjust the path as necessarys
 import { Resend } from 'resend';
@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     return new Response(JSON.stringify({ error: 'Name, message, and email are required.' }), { status: 400 });
   }
 
-  let emailStr = `${name} <Delivered@resend.dev>`;
+  const emailStr = `${name} <Delivered@resend.dev>`;
   const { data, error } = await resend.emails.send({
     from: emailStr,
     to: ['connerarmour@gmail.com'],

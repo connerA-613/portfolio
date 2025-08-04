@@ -6,6 +6,7 @@ import type { Project } from '../types';
 import ProjectModal from '../components/projectModal';
 import { useQuery } from '@tanstack/react-query';
 import { techIconMap } from '../components/techIcons';
+import Image from 'next/image';
 
 
 const supabaseUrl = process.env.NEXT_PUBLIC_URL!;
@@ -44,16 +45,16 @@ export default function Projects() {
     return (
         <section id="projects" className="py-16 px-4">
             <h2 className="text-3xl font-bold mb-8">Projects</h2>
-            <p className="text-lg mb-8">Here are some of the projects I've worked on, showcasing my skills and creativity. Click on a project to view more!</p>
+            <p className="text-lg mb-8">Here are some of the projects I&apos;ve worked on, showcasing my skills and creativity. Click on a project to view more!</p>
             <div className="flex flex-wrap justify-center gap-8">
                 {(projects ?? []).map(project => (
-                    <button className="w-full max-w-[420px] h-full hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
+                    <button key={project.project_id} className="w-full max-w-[420px] h-full hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
                         onClick={() => {
                             setActiveProject(project);
                             setIsOpen(true);
                         }}
                     >
-                        <div key={project.project_id} className="bg-white flex flex-col justify-between min-h-[500px] p-6 rounded-lg shadow-md">
+                        <div className="bg-white flex flex-col justify-between min-h-[500px] p-6 rounded-lg shadow-md">
                             <h3 className="text-xl font-semibold mb-2">{project.project_title}</h3>
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {project.tech_stack.map((tech, index) => (
@@ -64,7 +65,16 @@ export default function Projects() {
                                 ))}
                             </div>
                             {project.image_link && (
-                                <img src={project.image_link} alt={project.project_title} className="w-full sm:w-[350px] h-[200px] mx-auto mb-4 rounded" />
+                                <div className="w-full sm:w-[350px] h-[200px] mx-auto mb-4 rounded overflow-hidden relative">
+                                    <Image
+                                        src={project.image_link}
+                                        alt={project.project_title}
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        className="rounded"
+                                        sizes="(max-width: 640px) 100vw, 350px"
+                                    />
+                                </div>
                             )}
                             <p className="text-gray-700 mb-4">{project.project_blurb}</p>
                         </div>

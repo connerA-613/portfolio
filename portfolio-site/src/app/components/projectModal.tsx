@@ -1,5 +1,6 @@
 import type {Project} from "../types";
 import Link  from "next/link";
+import Image from "next/image";
 
 const ProjectModal = ({ project, onClose, }: { project: Project | null; onClose: () => void; }) => {
     if (!project) return null;
@@ -14,11 +15,15 @@ const ProjectModal = ({ project, onClose, }: { project: Project | null; onClose:
             ✖
         </button>
         <h2 className="text-2xl font-bold mb-4">{project.project_title}</h2>
-        <img
+        <div className="w-full max-w-lg max-h-[300px] mb-4 rounded overflow-hidden">
+            <Image
             src={project.image_link}
             alt={project.project_title}
-            className="w-full max-w-lg max-h-[300px] rounded mb-4"
-        />
+            width={800}
+            height={300}
+            className="object-cover w-full h-full"
+            />
+        </div>
         <p>{project.project_description}</p>
             <div className="flex flex-row gap-4 mt-4">
                 <Link
