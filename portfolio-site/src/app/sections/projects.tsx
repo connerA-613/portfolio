@@ -32,7 +32,7 @@ async function fetchProjects(): Promise<Project[]> {
 export default function Projects() {
     const [activeProject, setActiveProject] = useState<Project | null>(null);
     const [isOpen, setIsOpen] = useState(false);
-    
+
     const { data: projects, isLoading, isError, error } = useQuery({
         queryKey: ['projects'],
         queryFn: fetchProjects,
@@ -45,15 +45,15 @@ export default function Projects() {
         <section id="projects" className="py-16 px-4">
             <h2 className="text-3xl font-bold mb-8">Projects</h2>
             <p className="text-lg mb-8">Here are some of the projects I've worked on, showcasing my skills and creativity. Click on a project to view more!</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="flex flex-wrap justify-between gap-8">
                 {projects.map(project => (
-                    <button className="w-full h-full hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
+                    <button className="w-full max-w-[420px] h-full hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
                         onClick={() => {
                             setActiveProject(project);
                             setIsOpen(true);
                         }}
                     >
-                        <div key={project.project_id} className="bg-white min-h-[420px] p-6 rounded-lg shadow-md">
+                        <div key={project.project_id} className="bg-white flex flex-col justify-between min-h-[500px] p-6 rounded-lg shadow-md">
                             <h3 className="text-xl font-semibold mb-2">{project.project_title}</h3>
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {project.tech_stack.map((tech, index) => (

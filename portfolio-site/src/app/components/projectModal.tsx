@@ -34,7 +34,7 @@ const ProjectModal = ({ project, onClose, }: { project: Project | null; onClose:
                         href={project.demo_link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center justify-center"
+                        className="bg-[var(--color-brand)] text-white px-4 py-2 rounded hover:bg-[var(--color-brand-dark)] flex items-center justify-center"
                     >
                         View Live
                     </Link>

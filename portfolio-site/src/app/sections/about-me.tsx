@@ -3,7 +3,7 @@
 
 export default function AboutMe() {
   return (
-    <section className="p-10 bg-gray-100 text-gray-800 flex flex-col items-left justify-left w-full mx-auto">
+    <section id="about" className="p-10 bg-gray-100 text-gray-800 flex flex-col items-left justify-left w-full mx-auto">
       <h2 className="text-3xl font-bold mb-4">About Me</h2>
       <p className="mb-4">
         I'm a passionate Software Engineer with a strong foundation in full-stack development and a keen eye for clean, modern UI. 
