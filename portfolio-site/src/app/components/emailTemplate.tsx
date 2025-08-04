@@ -4,13 +4,16 @@ interface EmailTemplateProps {
   name: string;
   message: string;
   subject: string;
+  email: string;
 }
 
-export function EmailTemplate({ name, message, subject }: EmailTemplateProps) {
+export function EmailTemplate({ name, message, subject, email }: EmailTemplateProps) {
   return (
     <div>
-      <h1>New Contact Form Submission From {name}</h1>
+      <h1>{subject}</h1>
+      <h2>Message from {name}</h2>
       <p>{message}</p>
+      <p>Reply to: {email}</p>
     </div>
   );
 }

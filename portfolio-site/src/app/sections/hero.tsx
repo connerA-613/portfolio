@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="col-span-1 flex flex-col sm:mt-2 text-center mx-auto items-left justify-center">
             <h1 className="text-6xl font-bold text-left sm:mt-2 ">Hi there! I'm Conner</h1>
             <p className="mt-4 text-xl text-left">I'm a passionate Software Engineer.</p>
-            <Link href="resume.pdf" target="_blank" className="mt-6 inline-block bg-[var(--color-brand)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-brand-dark)] transition-colors">
+            <Link href="/resume.pdf" target="_blank" className="mt-6 inline-block bg-[var(--color-brand)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-brand-dark)] transition-colors">
                 View My Resume
             </Link>
         </div>

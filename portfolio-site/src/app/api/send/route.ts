@@ -14,12 +14,12 @@ export async function POST(request: Request) {
     return new Response(JSON.stringify({ error: 'Name, message, and email are required.' }), { status: 400 });
   }
 
-  let emailStr = `${name} <${email}>`;
+  let emailStr = `${name} <Delivered@resend.dev>`;
   const { data, error } = await resend.emails.send({
-    from: 'Acme <Delivered@resend.dev>',
+    from: emailStr,
     to: ['connerarmour@gmail.com'],
     subject: subject || 'New Contact Form Submission',
-    react: EmailTemplate({ name, message }),
+    react: EmailTemplate({ name, message, subject: subject || 'New Contact Form Submission', email }),
   });
 
   if (error) {

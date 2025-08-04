@@ -17,7 +17,7 @@ const ProjectModal = ({ project, onClose, }: { project: Project | null; onClose:
         <img
             src={project.image_link}
             alt={project.project_title}
-            className="w-full h-[200px] object-cover rounded mb-4"
+            className="w-full max-w-lg max-h-[300px] rounded mb-4"
         />
         <p>{project.project_description}</p>
             <div className="flex flex-row gap-4 mt-4">
