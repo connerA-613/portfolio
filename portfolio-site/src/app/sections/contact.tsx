@@ -47,7 +47,7 @@ const Contact = () => {
             {submitted ? (
                 <p className="text-center">Thank you for reaching out! I&apos;ll get back to you soon.</p>
             ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col justify-center align-center space-y-4 w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto">
+                <form onSubmit={handleSubmit} className="flex flex-col justify-center align-center px-4 space-y-4 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl rounded-xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div className="col-span-1 mb-4">
                             <div className="flex flex-col mb-4">
@@ -59,7 +59,7 @@ const Contact = () => {
                                     value={form.name}
                                     onChange={handleChange}
                                     required
-                                    className="p-2 border rounded"
+                                    className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
                                 />
                             </div>
                             <div className="flex flex-col mb-4">
@@ -71,7 +71,7 @@ const Contact = () => {
                                     value={form.email}
                                     onChange={handleChange}
                                     required
-                                    className="p-2 border rounded"
+                                    className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
                                 />
                             </div>
                             <div className="flex flex-col mb-4">
@@ -83,7 +83,7 @@ const Contact = () => {
                                     value={form.subject}
                                     onChange={handleChange}
                                     required
-                                    className="p-2 border rounded"
+                                    className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
                                 />
                             </div>
                         </div>
@@ -96,7 +96,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                                 rows={8}
-                                className="p-2 border rounded"
+                                className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
                             />
                         </div>
                     </div>

@@ -5,12 +5,11 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 py-10 mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-6 justify-items-center items-center">
+
           {/* Left Section */}
           <div className="text-center md:text-left">
             <h3 className="text-xl font-semibold text-white">Conner Armour</h3>
-            <p className="text-sm text-gray-400">Building beautiful, user-focused software.</p>
           </div>
 
           {/* Navigation Links */}

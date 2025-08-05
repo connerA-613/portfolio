@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'Conner Armour Portfolio',
     images: [
       {
-        url: '/social-preview.png', // Place in public/
+        url: '/og-image.png', // Place in public/
         width: 1200,
         height: 630,
         alt: 'Conner Armour Portfolio Preview',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Conner Armour | Software Engineer',
     description: 'Explore my full-stack developer portfolio.',
-    images: ['/social-preview.png'],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: '/icon.png',
