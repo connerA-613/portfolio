@@ -46,9 +46,9 @@ export default function Projects() {
         <section id="projects" className="py-16 px-4">
             <h2 className="text-3xl font-bold mb-8">Projects</h2>
             <p className="text-lg mb-8">Here are some of the projects I&apos;ve worked on, showcasing my skills and creativity. Click on a project to view more!</p>
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-y-8">
                 {(projects ?? []).map(project => (
-                    <button key={project.project_id} className="w-full max-w-[420px] h-full hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
+                    <button key={project.project_id} className="w-full max-w-[600px] h-full hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
                         onClick={() => {
                             setActiveProject(project);
                             setIsOpen(true);
