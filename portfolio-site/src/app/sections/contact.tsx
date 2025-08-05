@@ -95,7 +95,7 @@ const Contact = () => {
                                 value={form.message}
                                 onChange={handleChange}
                                 required
-                                rows={4}
+                                rows={8}
                                 className="p-2 border rounded"
                             />
                         </div>
