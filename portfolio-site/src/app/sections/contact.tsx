@@ -100,7 +100,7 @@ const Contact = () => {
                             />
                         </div>
                     </div>
-                    <button type="submit" className="bg-[var(--color-brand)] text-white px-4 py-2 rounded hover:bg-[var(--color-brand-dark)]">
+                    <button type="submit" className="bg-[var(--color-brand)] text-white px-4 py-2 rounded hover:bg-[var(--color-brand-dark)] cursor-pointer">
                         Send Message
                     </button>
                 </form>
