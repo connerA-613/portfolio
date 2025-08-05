@@ -48,7 +48,7 @@ export default function Projects() {
             <p className="text-lg mb-8">Here are some of the projects I&apos;ve worked on, showcasing my skills and creativity. Click on a project to view more!</p>
             <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-y-8">
                 {(projects ?? []).map(project => (
-                    <button key={project.project_id} className="w-full max-w-[600px] h-full hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
+                    <button key={project.project_id} className="w-full max-w-[600px] h-full md:hover:shadow-xl md:hover:scale-[1.02] transition-all cursor-pointer"
                         onClick={() => {
                             setActiveProject(project);
                             setIsOpen(true);

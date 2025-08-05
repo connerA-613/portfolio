@@ -59,7 +59,7 @@ const Contact = () => {
                                     value={form.name}
                                     onChange={handleChange}
                                     required
-                                    className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
+                                    className="bg-white p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
                                 />
                             </div>
                             <div className="flex flex-col mb-4">
@@ -71,7 +71,7 @@ const Contact = () => {
                                     value={form.email}
                                     onChange={handleChange}
                                     required
-                                    className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
+                                    className="bg-white p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
                                 />
                             </div>
                             <div className="flex flex-col mb-4">
@@ -83,7 +83,7 @@ const Contact = () => {
                                     value={form.subject}
                                     onChange={handleChange}
                                     required
-                                    className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
+                                    className="bg-white p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
                                 />
                             </div>
                         </div>
@@ -96,7 +96,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                                 rows={8}
-                                className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
+                                className="bg-white p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
                             />
                         </div>
                     </div>
