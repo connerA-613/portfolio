@@ -3,8 +3,8 @@ import Link from "next/dist/client/link";
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between p-4 bg-white text-[var(--text)] border-b border-[var(--color-border)] fixed top-0 left-0 right-0 z-50 shadow-sm">
-      <Link href="#home">
-        <h2 className="text-2xl font-bold hover:!text-white transition hover:bg-[var(--color-brand)] rounded-xl p-1">Conner Armour</h2>
+      <Link href="#home" className="hover:!bg-[var(--color-brand)] transition rounded-xl md:p-1">
+        <h2 className="text-2xl font-bold hover:!text-white transition">Conner Armour</h2>
       </Link>
       <ul className="flex space-x-4 gap-4 text-lg">
         <li><a href="#about" className="hover:text-[var(--color-brand)] md:hover:bg-[var(--color-brand)] md:hover:text-white rounded-xl md:px-4 md:py-2 transition">About</a></li>
