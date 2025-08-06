@@ -12,7 +12,7 @@ export default function AboutMe() {
         TypeScript, and cloud technologies while actively contributing to impactful projects.
       </p>
       <p>
-        In my free time, I love contributing to open-source projects and exploring new programming languages.
+        In my free time, I love working on personal projects and exploring new programming languages.
       </p>
     </section>
   );

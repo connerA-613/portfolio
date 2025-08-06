@@ -9,7 +9,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 export default function Hero() {
   return (
-    <header className="grid grid-cols-1 md:grid-cols-2 mt-2 mx-auto items-center min-h-screen max-w-6xl justify-center gap-2 text-black text-left p-10 pt-25 align-center mnd:pt-0 w-full mb-20">
+    <header id="home" className="grid grid-cols-1 md:grid-cols-2 mt-2 mx-auto items-center min-h-screen max-w-6xl justify-center gap-2 text-black text-left p-10 pt-25 align-center mnd:pt-0 w-full mb-20">
       <div className="order-2 md:order-1 col-span-1 flex flex-col sm:mt-2 text-center mx-auto items-left justify-center">
         <h1 className="text-6xl font-bold text-left sm:mt-6 md:mt-2 ">Hi there! I&apos;m Conner</h1>
         <span className="text-gray-700 text-left text-xl mt-4">
